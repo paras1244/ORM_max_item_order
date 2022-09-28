@@ -15,5 +15,7 @@ class Items(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name="order")
     
     def __str__(self):
-        return '%s: %d' % (self.product_name, self.quantity)
+        return self.product_name
+
+        # return '%s: %d' % (self.product_name, self.quantity)
         # return (self.product_name, str(self.quantity))
